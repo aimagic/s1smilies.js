@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>下载麻将脸</title>
+</head>
+
+<body>
+	<p>Ctrl + S 保存网页，表情在同目录的 "下载麻将脸_files" 文件夹</p>
+	<script src="https://bbs.saraba1st.com/2b/data/cache/common_smilies_var.js"></script>
+	<script>
+		const container = document.createElement('div')
+		smilies_array.forEach((e, type_index) => {
+			console.log('type: ' + type_index)
+			e.forEach((e, i) => {
+				e.forEach((e, i) => {
+					container.appendChild(
+						(() => {
+							const img = new Image()
+							img.src = `https://static.saraba1st.com/image/smiley/${smilies_type['_'+type_index][1]}/${e[2]}`
+							return img
+						})()
+					)
+				})
+			})
+		})
+		document.body.appendChild(container)
+	</script>
+</body>
+
+</html>
